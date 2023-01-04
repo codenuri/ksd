@@ -42,14 +42,13 @@ class Program
     public static void Main()
     {
         // Derived d = new Derived();
-        //Derived d = new Derived(5);
+        Derived d = new Derived(5);
 
         // 다음중 에러를 찾으세요
         Animal a = new Animal();    // 생성자가 protected 이므로!
         Dog d = new Dog();          // 
     }
 }
-
 // protected 생성자를 사용하는의도!
 // => 자신은 객체를 만들수 없지만(추상적 존재)!!!
 // => 파생 클래스는 객체를 만들수 있게(구체적 존재) 하기 위한 의도!!
