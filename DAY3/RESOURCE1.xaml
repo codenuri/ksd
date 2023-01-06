@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPF04_RESOURCE.RESOURCE1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF04_RESOURCE"
+        mc:Ignorable="d"
+        Title="RESOURCE1" Height="450" Width="800">
+    <StackPanel>
+
+        <Button Content="button1" Background="Yellow"/>
+        
+        <!-- x:Static 사용자가 만든 클래스의 static 필드에 접근할때 사용 -->
+        <Button Content="button2" Background="{x:Static local:MyConstant.brush2}"/>
+        
+        <!-- 주의 아래 코드와 헷갈리지 마세요-->
+        <!-- {local:MyColor TitleColor}        : new MyColor("TitleColor")-->
+        <!-- {x:Static local:MyConstant.brush2}: new Static("local:MyConstant.brush2")-->
+        
+        <!--<Button Background="{local:MyColor TitleColor}" Content="확인1"/>-->
+
+        
+        
+        <Button Content="button3" FontSize="{x:Static local:MyConstant.fontsize1}"/>
+        
+
+
+    </StackPanel>
+</Window>
