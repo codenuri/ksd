@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPF06_BIND.ELEMENTBIND"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF06_BIND"
+        mc:Ignorable="d"
+        Title="ELEMENTBIND" Height="450" Width="800">
+    
+    <StackPanel>
+        <Label Content="label1" x:Name="label1" FontSize="30"/>
+        <Slider ValueChanged="slider1_ValueChanged" x:Name="slider1" Minimum="10" Maximum="100" Value="30"/>
+
+        <Label Content="label2"  x:Name="label2" FontSize="30"/>
+        <Slider x:Name="slider2" Minimum="10" Maximum="100" Value="30"/>
+
+
+        <Label Content="label3" x:Name="label3" 
+               FontSize="{Binding ElementName=slider3, Path=Value, Mode=TwoWay}"/>
+
+
+        <Slider x:Name="slider3" Minimum="10" Maximum="100" Value="30"/>
+
+        <Button Click="Button_Click" Content="확인"/>
+        
+    </StackPanel>
+</Window>
