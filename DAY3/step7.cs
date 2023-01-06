@@ -8,7 +8,8 @@ using System.Windows.Media;
 
 class MainWindow : Window
 {
-    public MainWindow()
+
+    public void InitializeComponent()
     {
         // 1. Lauout 객체를 먼저 생성
         //    Grid : row, col 로 자식을 배치하는 layout
@@ -26,7 +27,7 @@ class MainWindow : Window
         grid.ColumnDefinitions.Add(new ColumnDefinition());
         grid.ColumnDefinitions.Add(new ColumnDefinition());
 
-        grid.ShowGridLines= true;
+        grid.ShowGridLines = true;
 
         // 3. grid layout 을 Window 의 content 속성에 연결
         this.Content = grid;
@@ -44,9 +45,27 @@ class MainWindow : Window
         // 6. grid 가 가진 내부 collection에 자식 컨트롤 부착
         grid.Children.Add(btn1);
 
-        // 다하신 분은 버튼 한개 더 만들어서 1, 1 에 부착해 보세요.
+        Button btn2 = new Button();
+        btn2.Content = "button2";
 
-    } 
+        Grid.SetRow(btn2, 1);
+        Grid.SetColumn(btn2, 1);
+
+        grid.Children.Add(btn2);
+
+        //--------------------------
+        btn1.Click += Btn1_Click;
+    }
+
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+
+    private void Btn1_Click(object sender, RoutedEventArgs e)
+    {
+        Console.WriteLine("button1 click");
+    }
 }
 
 
