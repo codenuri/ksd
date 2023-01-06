@@ -19,16 +19,24 @@ namespace WPF06_BIND2
     /// </summary>
     public partial class DATABIND1 : Window
     {
+        private Person p  = null;
+
         public DATABIND1()
         {
             InitializeComponent();
 
-            Person p = new Person();
+            p = new Person();
 
             p.Name = "kim";
             p.Address = "pusan";
 
             stackpanel.DataContext = p; // 데이타 공급원은 "객체 p" 이다.
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            p.Address = "seoul";
+            p.Name = "lee";
         }
     }
 }

@@ -26,7 +26,11 @@ public class Person : INotifyPropertyChanged
     public String Address
     {
         get { return addr; }
-        set { addr = value; }
+        set { addr = value;
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs("Address"));
+
+        }
     }
     
     // Person 객체와 연결된 모든 UI는 아래 event 에 함수를 등록하게 됩니다.
