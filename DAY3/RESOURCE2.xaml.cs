@@ -21,6 +21,8 @@ namespace WPF04_RESOURCE
     {
         public RESOURCE2()
         {
+            //this.Resources["brush1"] = new SolidColorBrush(Colors.Red);
+
             InitializeComponent();
 
             // this : Main Window 입니다.
@@ -30,7 +32,7 @@ namespace WPF04_RESOURCE
 
             // 핵심 : 윈도우 속성중에 Resource 라는 "Dictionary" 가 있습니다.
             // => 자주 사용되는 자원을 미리 생성해 놓고 사용할수 있습니다.
-            // this.Resources["brush1"] = new SolidColorBrush(Colors.Red);
+            this.Resources["brush1"] = new SolidColorBrush(Colors.Red);
 
         }
 

@@ -20,8 +20,8 @@
         <Button Content="button2" Background="{StaticResource ResourceKey=brush2}"/>
 
         <Button Content="button3" Background="{DynamicResource ResourceKey=brush2}"/>
-        
-        <Button Content="button4" Click="Button_Click"/>
+
+        <Button Content="button4" Background="{DynamicResource ResourceKey=brush1}" Click="Button_Click"/>
         
     </StackPanel>
 </Window>
