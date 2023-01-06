@@ -1,0 +1,16 @@
+﻿<Window x:Class="WPF02.Ex3Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF02"
+        mc:Ignorable="d"
+        Title="Ex3Window" Height="450" Width="800">
+
+    <!-- {} 는 해당하는 타입의 객체를 생성한후 약속된 함수를 호출해달라는것 -->
+    <!-- 반드시 타입은 MarkupExtension 으로 부터 파생되어야 합니다. -->
+    <StackPanel>
+        <Button Background="{local:MyColor TitleColor}" Content="확인1"/>
+        <Button Background="{local:MyColor HeaderColor}" Content="확인2"/>
+    </StackPanel>
+</Window>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPF02.Ex2Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF02"
+        mc:Ignorable="d"
+        Title="Ex2Window" Height="300" Width="200">
+    <StackPanel>
+
+        <Button>button1</Button>
+        <Button Content="button2"></Button>
+        <Button Content="button3"/>
+        
+        <!-- 버튼을 배경을 변경하는 2가지 방법 -->
+        <Button Content="button4" Background="Aqua"/>
+
+        <Button Content="button5">
+            <Button.Background>
+                <SolidColorBrush Color="AliceBlue"/>
+            </Button.Background>
+        </Button>
+
+        <!-- 버튼의 Content 에 다른 컨트롤 연결 -->
+        <Button >
+            <Label>Label</Label>
+        </Button>
+        
+        <!-- 코드에서 컨트롤에 접근하려면 Name 또는 x:Name 속성을 지정하세요 -->
+        <Button Content="button7" Name="button7" Click="button7_Click"/>
+        <Button Content="button8" x:Name="button8"/>
+        
+    </StackPanel>
+</Window>
